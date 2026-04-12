@@ -355,9 +355,9 @@
     <a class="post" href="#">
       <span class="post-num">02</span>
       <div class="post-body">
-        <div class="post-tag">Günlük</div>
-        <h2 class="post-title">Yavaş sabahlar üzerine</h2>
-        <p class="post-excerpt">Telefona bakmadan geçen ilk 30 dakikanın verdiği şey.</p>
+        <div class="post-tag">Erasmus Rehberi</div>
+        <h2 class="post-title">Krosno, Polonya'da bir günüm.</h2>
+        <p class="post-excerpt">Burası bir harika!</p>
         <p class="post-meta">15 Şubat 2025 · 3 dk okuma</p>
       </div>
       <span class="post-arrow">↗</span>
@@ -382,7 +382,7 @@
     <div>
       <p class="about-label">Hakkımda</p>
       <p class="about-text">
-        Merhaba, benMert. Muğla'da yaşıyorum.
+        Merhaba, ben Mert. Muğla'da yaşıyorum.
         Bu blog, aklımı meşgul eden konuları yazıya dökmek için var. Bazen teknik, bazen kişisel ama her zaman dürüst.
       </p>
     </div>
@@ -392,10 +392,10 @@
         <a class="about-link" href="https://github.com/ryocs15" target="_blank">
           GitHub <span>↗</span>
         </a>
-        <a class="about-link" href="https://twitter.com/ryocs15" target="_blank">
+        <a class="about-link" href="https://twitter.com/combosgombos" target="_blank">
           Twitter / X <span>↗</span>
         </a>
-        <a class="about-link" href="mailto:email@adresin.com">
+        <a class="about-link" href="mailto:mertahmetos@hotmail.com">
           E-posta <span>→</span>
         </a>
       </div>

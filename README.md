@@ -304,7 +304,7 @@
 <body>
 
   <header>
-    <a class="logo" href="/">Ad Soyad</a>
+    <a class="logo" href="/">Kozbur.com</a>
     <nav>
       <a href="#yazilar">Yazılar</a>
       <a href="#hakkimda">Hakkımda</a>

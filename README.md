@@ -383,17 +383,17 @@
     <div>
       <p class="about-label">Hakkımda</p>
       <p class="about-text">
-        Merhaba, ben [Adın Soyadın]. [Şehir]'de yaşıyorum ve [meslek/ilgi alanı] üzerine çalışıyorum.
-        Bu blog, aklımı meşgul eden konuları yazıya dökmek için var. Bazen teknik, bazen kişisel, her zaman dürüst.
+        Merhaba, benMert. Muğla'da yaşıyorum.
+        Bu blog, aklımı meşgul eden konuları yazıya dökmek için var. Bazen teknik, bazen kişisel ama her zaman dürüst.
       </p>
     </div>
     <div>
       <p class="about-label">Bağlantılar</p>
       <div class="about-links">
-        <a class="about-link" href="https://github.com/kullaniciadi" target="_blank">
+        <a class="about-link" href="https://github.com/ryocs15" target="_blank">
           GitHub <span>↗</span>
         </a>
-        <a class="about-link" href="https://twitter.com/kullaniciadi" target="_blank">
+        <a class="about-link" href="https://twitter.com/ryocs15" target="_blank">
           Twitter / X <span>↗</span>
         </a>
         <a class="about-link" href="mailto:email@adresin.com">
@@ -404,7 +404,7 @@
   </section>
 
   <footer>
-    <span>© 2025 Ad Soyad</span>
+    <span>© 2025 Mert </span>
     <span>GitHub Pages üzerinde yayınlanmaktadır</span>
   </footer>
 

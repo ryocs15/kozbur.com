@@ -1,1 +1,2 @@
+Kendi sitemizi tasarlamayı öğreniyoruz.
 

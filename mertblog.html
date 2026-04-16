@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krosno Gezi Rehberi | Mert'in Blogu</title>
-    
+    <title>Mert'in Blogu | Kozbur</title>
+    <meta name="description" content="Mert Ahmet'in kişisel blog sayfası — geziler, deneyimler ve hayata dair yazılar.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
     <style>
-        /* Temel CSS Ayarları (index.html ile uyumlu) */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -28,12 +26,9 @@
             text-decoration: underline;
         }
 
-        /* Başlık ve Menü - Kozbur sayfasındaki fotoğraf ayarlarıyla aynı */
-        /* Başlık ve Menü */
+        /* HEADER — aynı stil */
         header {
-            <header>
-        <a href="index.html" class="site-logo">Kozbur</a>
-            position: relative; /* LOGO İÇİN BU SATIRI YENİ EKLEDİK */
+            position: relative;
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('arkaplan.jpg');
             background-size: cover;
             background-position: center;
@@ -43,7 +38,6 @@
             text-align: center;
         }
 
-        /* Sol Üst Köşedeki Kozbur Logosu İçin Yeni Kodlar */
         .site-logo {
             position: absolute;
             top: 20px;
@@ -55,11 +49,11 @@
             letter-spacing: 1px;
         }
         .site-logo:hover {
-            color: #ccc; /* Üzerine gelince hafif grileşsin */
+            color: #ccc;
             text-decoration: none;
         }
+
         header h1 {
-            font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         nav ul {
@@ -74,7 +68,42 @@
             font-weight: bold;
         }
 
-        /* Ana İçerik Düzeni */
+        /* YAZAR TANITIM KARTI */
+        .author-banner {
+            background: #fff;
+            border-left: 5px solid #0066cc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #0066cc;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .author-info h2 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        .author-info p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* CONTAINER */
         .container {
             width: 90%;
             max-width: 1200px;
@@ -84,39 +113,90 @@
             gap: 2rem;
         }
 
-        /* Makale İçeriği */
+        /* MAIN */
         main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* ===================================================
+           YENİ YAZI EKLEMEK İÇİN:
+           Aşağıdaki <article> bloğunu kopyalayıp
+           main içine yapıştırmanız yeterli.
+           En üstteki yazı en yeni yazı olmalı.
+        =================================================== */
+        article {
             background: #fff;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s;
+        }
+        article:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         article h2 {
             color: #333;
-            margin: 1.5rem 0 1rem 0;
-            border-left: 5px solid #0066cc;
-            padding-left: 10px;
+            margin-bottom: 0.5rem;
         }
-        article p {
-            margin-bottom: 1rem;
+        article h2 a {
+            color: #333;
         }
+        article h2 a:hover {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* Kategori etiketi */
+        .category-tag {
+            display: inline-block;
+            background: #e8f0fb;
+            color: #0066cc;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.2rem 0.6rem;
+            border-radius: 3px;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.03em;
+        }
+
         .meta {
             font-size: 0.9rem;
             color: #777;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
         }
-        
-        /* Liste Tasarımı */
-        .guide-list {
-            margin: 1rem 0 1rem 1.5rem;
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #0066cc;
+            color: #fff;
+            border-radius: 3px;
         }
-        .guide-list li {
-            margin-bottom: 0.5rem;
+        .read-more:hover {
+            background: #0052a3;
+            text-decoration: none;
         }
 
-        /* Kenar Çubuğu (Sidebar) */
+        /* Henüz yazı yoksa gösterilecek alan */
+        .empty-state {
+            background: #fff;
+            padding: 3rem 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #777;
+        }
+        .empty-state p {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .empty-state span {
+            font-size: 2.5rem;
+        }
+
+        /* SIDEBAR */
         aside {
             display: flex;
             flex-direction: column;
@@ -132,9 +212,26 @@
             margin-bottom: 1rem;
             border-bottom: 2px solid #f4f4f4;
             padding-bottom: 0.5rem;
+            color: #333;
+        }
+        .widget ul {
+            list-style: none;
+        }
+        .widget ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid #0066cc;
+        }
+        .widget ul li a {
+            font-size: 0.95rem;
         }
 
-        /* Altbilgi (Footer) */
+        /* Kategoriler — buraya yeni kategori ekleyebilirsiniz */
+        .category-list li {
+            border-left: 3px solid #0066cc;
+        }
+
+        /* FOOTER */
         footer {
             background-color: #333;
             color: #fff;
@@ -142,25 +239,18 @@
             padding: 1.5rem 0;
             margin-top: 2rem;
         }
-
-        /* Geri Dön Butonu */
-        .back-btn {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 0.6rem 1.2rem;
-            background: #333;
-            color: #fff;
-            border-radius: 3px;
-        }
-        .back-btn:hover {
-            background: #555;
-            text-decoration: none;
+        footer a {
+            color: #aad4ff;
         }
 
-        /* Mobil Uyumluluk */
+        /* MOBİL */
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+            }
+            .author-banner {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -168,8 +258,9 @@
 <body>
 
     <header>
-        <h1>Krosno Gezi Rehberi</h1>
-        <p>Polonya'nın Cam Şehri ve Erasmus Günlükleri</p>
+        <a href="index.html" class="site-logo">Kozbur</a>
+        <h1>Mert'in Blogu</h1>
+        <p>Geziler, deneyimler ve hayata dair notlar</p>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
@@ -180,55 +271,88 @@
     </header>
 
     <div class="container">
-        
+
         <main>
+
+            <!-- YAZAR KARTI — sabit kalır, değiştirmene gerek yok -->
+            <div class="author-banner">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                    <h2>Mert Ahmet</h2>
+                    <p>Kişisel tecrübelerimi, gezdiğim ve gördüğüm yerleri sizlerle paylaşıyorum. Takipte kalın!</p>
+                </div>
+            </div>
+
+            <!-- ================================================
+                 YENİ YAZI EKLEMEK İÇİN:
+                 Aşağıdaki article bloğunu kopyala,
+                 en üste yapıştır, içeriği değiştir.
+                 "href" kısmına yazının kendi sayfasını yaz.
+                 ================================================ -->
+
+            <!-- ÖRNEK YAZI — silip gerçek yazılarınla değiştir -->
             <article>
-                <div class="meta">Yazar: Mert | Tarih: 16 Nisan 2026</div>
-                
-                <p>Polonya'nın güneydoğusunda yer alan Krosno, sadece tarihi bir kasaba değil, aynı zamanda Avrupa'nın en önemli cam üretim merkezlerinden biridir. Bu rehberde, hem şehrin kültürel dokusunu hem de bir öğrenci olarak burada yaşamın nasıl olduğunu keşfedeceğiz.</p>
-
-                <h2>Cam Miras Merkezi (Centrum Dziedzictwa Szkła)</h2>
-                <p>Krosno denince akla gelen ilk şey dünyaca ünlü cam sanatıdır. Şehrin merkezinde bulunan Cam Miras Merkezi, camın nasıl şekillendiğini canlı olarak görebileceğiniz muhteşem bir yer. Özellikle kristal koleksiyonları ve modern cam tasarımları büyüleyici bir işçilik sunuyor.</p>
-                <ul class="guide-list">
-                    <li>Canlı cam üfleme gösterilerini izleyin.</li>
-                    <li>Şehir meydanındaki cam heykelleri fotoğraflayın.</li>
-                    <li>Yerel dükkanlardan el yapımı kristal hediyelikler alın.</li>
-                </ul>
-
-                <h2>PANS Krosno ve Öğrenci Yaşamı</h2>
-                <p>Krosno Uygulamalı Bilimler Devlet Akademisi (PANS Krosno), şehre genç ve dinamik bir hava katıyor. Erasmus+ programı ile buraya gelen öğrenciler için kampüs hayatı oldukça samimi ve kompakt. Şehir küçük olduğu için her yere yürüyerek veya bisikletle ulaşmak çok kolay.</p>
-
-                <h2>Gezilecek Diğer Yerler</h2>
-                <p>Krosno sadece camdan ibaret değil. Eski şehir meydanı (Rynek), Orta Çağ'dan kalma dokusuyla akşam yürüyüşleri için ideal. Ayrıca şehre çok yakın mesafede bulunan Odrzykoń Kalesi kalıntıları, doğa ve tarih severler için harika bir hafta sonu rotası.</p>
-
-                <a href="index.html" class="back-btn">← Ana Sayfaya Dön</a>
+                <span class="category-tag">Gezi</span>
+                <h2><a href="#">İlk Yazım Yakında!</a></h2>
+                <div class="meta">Yazar: Mert Ahmet &nbsp;|&nbsp; Tarih: 16 Nisan 2026</div>
+                <p>Sizlerle kişisel tecrübelerimi, gezdiğim ve gördüğüm yerleri paylaşmayı planlıyorum. İlk yazım çok yakında burada olacak — takipte kalın!</p>
+                <a href="#" class="read-more">Devamını Oku</a>
             </article>
+
+            <!-- YENİ YAZI ŞABLONU (kopyala-yapıştır):
+
+            <article>
+                <span class="category-tag">KATEGORİ</span>
+                <h2><a href="yazi-adi.html">Yazı Başlığı</a></h2>
+                <div class="meta">Yazar: Mert Ahmet &nbsp;|&nbsp; Tarih: GG Ay YYYY</div>
+                <p>Yazının kısa özeti veya girişi buraya gelecek. İki-üç cümle yeterli.</p>
+                <a href="yazi-adi.html" class="read-more">Devamını Oku</a>
+            </article>
+
+            -->
+
         </main>
 
         <aside>
+
             <div class="widget">
-                <h3>Hızlı Bilgiler</h3>
-                <ul class="guide-list">
-                    <li><strong>Para Birimi:</strong> Polonya Zlotisi (PLN)</li>
-                    <li><strong>Önemli Yemek:</strong> Pierogi</li>
-                    <li><strong>Ulaşım:</strong> Rzeszów havaalanı en yakın seçenek.</li>
-                </ul>
+                <h3>Mert Hakkında</h3>
+                <p style="font-size:0.95rem; color:#555;">Merhaba! Ben Mert. Gezmeyi, keşfetmeyi ve deneyimlerimi yazmayı seviyorum. Kozbur'da seninle buluşmak için sabırsızlanıyorum.</p>
             </div>
-            
+
+            <!-- KATEGORİLER — yeni kategori ekledikçe buraya da ekle -->
             <div class="widget">
                 <h3>Kategoriler</h3>
-                <ul>
-                    <li><a href="#">Seyahat Notları</a></li>
-                    <li><a href="#">Erasmus Günlüğü</a></li>
-                    <li><a href="#">Cam Sanatı</a></li>
+                <ul class="category-list">
+                    <li><a href="#">Gezi</a></li>
+                    <li><a href="#">Kişisel</a></li>
+                    <li><a href="#">Erasmus</a></li>
+                    <!-- YENİ KATEGORİ: <li><a href="#">Kategori Adı</a></li> -->
                 </ul>
             </div>
+
+            <!-- SON YAZILAR — yeni yazı ekledikçe buraya da ekle -->
+            <div class="widget">
+                <h3>Son Yazılar</h3>
+                <ul>
+                    <li><a href="#">İlk Yazım Yakında!</a></li>
+                    <!-- YENİ YAZI: <li><a href="yazi-adi.html">Yazı Başlığı</a></li> -->
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h3>Diğer Yazarlar</h3>
+                <ul>
+                    <li><a href="omerblog.html">Ömer'in Blogu</a></li>
+                </ul>
+            </div>
+
         </aside>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Kozbur Blog. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 <a href="index.html">Kozbur</a>. Tüm hakları saklıdır.</p>
     </footer>
 
 </body>

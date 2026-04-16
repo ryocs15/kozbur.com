@@ -1,4 +1,186 @@
----
-layout: home
-background: '/img/bg-index.jpg'
----
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benim Blogum | Ana Sayfa</title>
+    <style>
+        /* Temel CSS Ayarları */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Başlık ve Menü */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Ana İçerik Düzeni (Grid) */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Blog Yazıları */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        article {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        article h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #0066cc;
+            color: #fff;
+            border-radius: 3px;
+        }
+        .read-more:hover {
+            background: #0052a3;
+            text-decoration: none;
+        }
+
+        /* Kenar Çubuğu (Sidebar) */
+        aside {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            align-self: start;
+        }
+        aside h3 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 0.5rem;
+        }
+        aside ul {
+            list-style: none;
+        }
+        aside ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Altbilgi (Footer) */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Mobilde tek sütun yap */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Benim Harika Blogum</h1>
+        <p>Teknoloji, tasarım ve hayata dair yazılar</p>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkımda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <main>
+            <article>
+                <h2><a href="#">HTML ve CSS ile Kendi Blogunu Yapmak</a></h2>
+                <div class="meta">Yazar: Ahmet Yılmaz | Tarih: 16 Nisan 2026</div>
+                <p>Kendi blogunuzu sıfırdan oluşturmak sandığınızdan çok daha kolaydır. Sadece temel HTML etiketlerini ve sayfa düzeni için biraz CSS bilmeniz yeterli. Bu yazımızda adım adım kendi sayfanızı nasıl tasarlayacağınızı inceleyeceğiz...</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+
+            <article>
+                <h2><a href="#">Web Tasarımında Renk Uyumu</a></h2>
+                <div class="meta">Yazar: Ahmet Yılmaz | Tarih: 12 Nisan 2026</div>
+                <p>Bir web sitesinin profesyonel görünmesindeki en büyük etkenlerden biri doğru renk paletinin seçilmesidir. Zıt renkler, birbirini tamamlayan tonlar ve okunabilirlik üzerine harika bir rehber hazırladık...</p>
+                <a href="#" class="read-more">Devamını Oku</a>
+            </article>
+        </main>
+
+        <aside>
+            <div class="widget">
+                <h3>Hakkımda</h3>
+                <p>Merhaba! Ben Ahmet. Web geliştirme ile ilgileniyorum ve öğrendiklerimi bu blogda paylaşıyorum.</p>
+            </div>
+            
+            <div class="widget" style="margin-top: 2rem;">
+                <h3>Kategoriler</h3>
+                <ul>
+                    <li><a href="#">Yazılım (12)</a></li>
+                    <li><a href="#">Tasarım (8)</a></li>
+                    <li><a href="#">Kişisel (5)</a></li>
+                    <li><a href="#">Teknoloji Haberleri (15)</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Benim Blogum. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>

@@ -25,12 +25,15 @@
         a:hover {
             text-decoration: underline;
         }
-
-        /* Başlık ve Menü */
+/* Başlık ve Menü */
         header {
-            background-color: #333;
+            /* Arka plana hem fotoğraf hem de yazılar okunsun diye hafif siyah bir filtre ekliyoruz */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('arkaplan.jpg');
+            background-size: cover; /* Fotoğrafın alanı tam kaplamasını sağlar */
+            background-position: center; /* Fotoğrafı ortalar */
+            background-repeat: no-repeat;
             color: #fff;
-            padding: 1.5rem 0;
+            padding: 4rem 0; /* Fotoğraf daha geniş görünsün diye iç boşluğu (yüksekliği) artırdık */
             text-align: center;
         }
         header h1 {

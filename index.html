@@ -26,15 +26,33 @@
             text-decoration: underline;
         }
 /* Başlık ve Menü */
+        /* Başlık ve Menü */
         header {
-            /* Arka plana hem fotoğraf hem de yazılar okunsun diye hafif siyah bir filtre ekliyoruz */
+            position: relative; /* LOGO İÇİN BU SATIRI YENİ EKLEDİK */
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('arkaplan.jpg');
-            background-size: cover; /* Fotoğrafın alanı tam kaplamasını sağlar */
-            background-position: center; /* Fotoğrafı ortalar */
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             color: #fff;
-            padding: 4rem 0; /* Fotoğraf daha geniş görünsün diye iç boşluğu (yüksekliği) artırdık */
+            padding: 4rem 0;
             text-align: center;
+        }
+
+        /* Sol Üst Köşedeki Kozbur Logosu İçin Yeni Kodlar */
+        .site-logo {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        .site-logo:hover {
+            color: #ccc; /* Üzerine gelince hafif grileşsin */
+            text-decoration: none;
+        }
         }
         header h1 {
             margin-bottom: 0.5rem;
